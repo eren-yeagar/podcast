@@ -36,9 +36,13 @@ when we want to commit code we can write git commit which will open up the commi
 
 ```sh
 git commit
-
 ```
 
+Set the global editor
+
+```
+git config --global core.editor emacs
+```
 
 
 ## branches
@@ -67,6 +71,21 @@ git status will shows us what files will or will not be commited
 git status
 
 ```
+## Gitconfig file
+
+The gitconfig file is what stores your global config such as email, name, editor.
+
+showing contents of our .gitconfig file
+```
+git config --list
+```
+When you first install your git on your machine, you are supposed to set up your name and email
+
+```sh
+git config --global user.name "Sriram Merugu"
+git config --global user.email example@gmail.com
+```
+
 
 ## Reset
 
