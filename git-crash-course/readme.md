@@ -85,6 +85,12 @@ When you first install your git on your machine, you are supposed to set up your
 git config --global user.name "Sriram Merugu"
 git config --global user.email example@gmail.com
 ```
+## Log
+
+git log will show recent git commits to the git tree 
+
+## Push
+
 
 
 ## Reset
@@ -99,3 +105,4 @@ git reset
 ```
 
 > git reset will revert a git add
+
