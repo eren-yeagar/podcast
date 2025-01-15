@@ -27,9 +27,53 @@ Since we are using github codespaces, we create a temporary directory in our wor
 ```sh
 mkdir /workspace/tmp
 cd /workspace/tmp
+````
+### HTTPS
 
+```sh
 git clone https://github.com/eren-yeagar/podcast.git
 ```
+
+> You'll need to generate a Personal Acess Token (PAT) 
+https://github.com/settings/token
+
+You will use the PAT as your login 
+
+- Give it access to Contents for Commits 
+
+### SSH
+
+```ssh
+git clone git@github.com:eren-yeagar/podcast.git
+
+cd folder_name
+```
+we wil need to create our own ssh rsa key pair
+
+```sh
+ssh-keygen -t rsa
+```
+
+```sh
+eval `ssh-agent`
+ssh-add /home/andrew/.ssh/alt-github_id_rsa
+```
+
+we can test our connection here :
+```
+ssh -T git@github.com
+```
+For WSL users and if you create a non default key you might need to add it
+
+### Github cli
+
+install the cli
+
+eg. linux (ubuntu)
+```sh
+
+```
+
 ## commits
 
 when we want to commit code we can write git commit which will open up the commit message in the editor  of choice.
@@ -47,11 +91,51 @@ git config --global core.editor emacs
 
 ## branches
 
+List of branches
+
+```
+git branch
+```
+
+create new branch
+
+```
+git branch branch-name
+```
+
+checkou the branch
+
+```
+git checkout branch-name
+```
+
+
 ## remotes
+
+We can add remote but often you will just add remote via upstream when adding a branch
+
+```sh
+git remote add ...
+git branch -u origin new-feature
+```
 
 ## stashing
 
+```
+git stash list
+git stash
+git stash save my-name
+git stash apply
+git stash pop
+```
+
+
 ## merging
+
+```
+git checkout dev
+git merge main 
+```
 
 ## add
 
