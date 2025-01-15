@@ -9,5 +9,9 @@
 			"mhutchie.git-graph"
 		]
 	}
+},
+"features":{
+"ghcr.io/devconntainer/features/github-cli:1":{},
+"ghcr.io/devconntainer/features/terraform:1":{}
 }
 }
